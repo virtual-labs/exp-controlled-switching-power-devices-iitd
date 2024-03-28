@@ -1,0 +1,32 @@
+
+     <img
+        class="main-window-imgs"
+        src="./src/images/final_src/new_select_option_1.png"
+    />
+    
+     <img
+        class="main-window-imgs"
+        src="./src/images/final_src/new_select_option_2.png"
+    />
+    
+     <img
+        class="main-window-imgs"
+        src="./src/images/final_src/new_select_option_3.png"
+    />
+    
+     <img
+        class="main-window-imgs"
+        src="./src/images/final_src/new_select_option_full.png"
+    />
+    
+
+new_select_option_1:this.allImgsDom[index++],
+new_select_option_2:this.allImgsDom[index++],
+new_select_option_3:this.allImgsDom[index++],
+new_select_option_full:this.allImgsDom[index++],
+
+
+new_select_option_1 : new Dom("new_select_option_1"),
+new_select_option_2 : new Dom("new_select_option_2"),
+new_select_option_3 : new Dom("new_select_option_3"),
+new_select_option_full : new Dom("new_select_option_full"),
