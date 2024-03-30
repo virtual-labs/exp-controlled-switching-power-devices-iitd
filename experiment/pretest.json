@@ -1,14 +1,13 @@
 {
   "version": 2.0,
   "questions": [
-    {
-   
+    {    
       "question": "1. Select the false statement:",
       "answers": {  
-        "a": "IGBT has three terminals: Collector, Emitter and Gate.",
-        "b": "IGBT is a four-layer semiconductor device.",
-        "c": "IGBT allows current in either directions.",
-        "d": "IGBT has three junctions."
+        "a": "SCR has three terminals: anode, cathode and gate.",
+        "b": "SCR is a four-layer semiconductor device.",
+        "c": "SCR allows current in either directions.",
+        "d": "SCR has three junctions."
       },
       "explanations": {
         "a": "Explanation 1  <a href='www.google.com'>here</a>",
@@ -22,12 +21,12 @@
       
     {
 
-      "question": "2. The properties of IGBT are a combination of which of the following two devices?",
+      "question": "2. SCR has a:",
       "answers": {
-        "a": "MOSFET and SCR",
-        "b": "SCR and TRIAC",
-        "c": "MOSFET and BJT",
-        "d": "BJT and TRIAC"
+        "a": "PNPN structure",
+        "b": "PNP structure",
+        "c": "NPNP structure",
+        "d": "NPN structure"
       },
       "explanations": {
         "a": "Explanation 1  <a href='www.google.com'>here</a>",
@@ -41,12 +40,12 @@
     
     {
 
-      "question": "3. Identify the three terminals of IGBT- collector (C), emitter (E) and gate (G) in the IGBT figure given below from left-to-right.<br><center><img src='images/pre2.png' height='300px'></center><br>",
+      "question": "3. Identify the three terminals of SCR- anode (A), cathode (K) and gate (G) in the SCR figure given below from left-to-right.<br><center><img src='images/pre2.png' height='300px'></center><br>",
       "answers": {
-        "a": "(i)- gate, (ii)- collector, (iii)- emitter",
-        "b": "(i)- collector, (ii)- emitter, (iii)- gate",
-        "c": "(i)- gate, (ii)- emitter, (iii)- collector",
-        "d": "(i)- emitter, (ii)- collector, (iii)- gate"
+        "a": "(i)- cathode, (ii)- anode, (iii)- gate",
+        "b": "(i)- anode, (ii)- cathode, (iii)- gate",
+        "c": "(i)- gate, (ii)- anode, (iii)- cathode",
+        "d": "(i)- gate, (ii)- cathode, (iii)- anode"
       },
       "explanations": {
         "a": "Explanation 1  <a href='www.google.com'>here</a>",
@@ -59,13 +58,12 @@
     },
         
     {
-    
-      "question": "4. Which of the following statements is correct?",
+      "question": "4. In order to trigger or turn- ON a SCR, the potential difference between anode-to-cathode must be:",
       "answers": {
-        "a": "The ON-state losses of IGBT is lower than that of MOSFET",
-        "b": "IGBT is faster than MOSFET",
-        "c": "IGBT combines the characteristics of MOSFET and a diode",
-        "d": "IGBT is best suited for frequencies above 100 kHz applications"
+        "a": "Positive",
+        "b": "Negative",
+        "c": "Zero",
+        "d": "Equal to gate-to-cathode voltage"
       },
       "explanations": {
         "a": "Explanation 1  <a href='www.google.com'>here</a>",
@@ -78,13 +76,12 @@
     },
 
       {
-      
-      "question": "5. Which of the following is the correct for IGBT from application point of view?",
+      "question": "5. Which of the following statements differentiate the SCR from a diode?",
       "answers": {
-        "a": "High power, high frequency",
-        "b": "High power, low frequency",
-        "c": "Low power, low frequency",
-        "d": "Low power, high frequency"
+        "a": "It blocks current when reverse biased.",
+        "b": "It conducts when forward biased at a given gate signal.",
+        "c": "It conducts when forward biased without any gate signal.",
+        "d": "It conducts when reverse biased at a given gate signal."
       },
       "explanations": {
         "a": "Explanation 1  <a href='www.google.com'>here</a>",
@@ -96,9 +93,8 @@
       "difficulty": "beginner"
     },
    
-      {   
-
-      "question": "6. The correct symbolic representation of an IGBT is?",
+      {    
+      "question": "6. The correct symbolic representation of an SCR is?",
       "answers": {
         "a": "<img src='images/pre3.png' height='70px'>",
         "b": "<img src='images/pre4.png' height='70px'>",
@@ -116,13 +112,12 @@
     },
 
       {
-        
       "question": "7. Choose the correct statement.",
       "answers": {
-        "a": "IGBT is a current controlled device.",
-        "b": "IGBT is a voltage controlled device.",
-        "c": "IGBT is an uncontrolled device.",
-        "d": "IGBT is controlled using a train of firing pulses."
+        "a": "SCR is a fully controlled device.",
+        "b": "SCR is a semi-controlled device.",
+        "c": "SCR is a uncontrolled device.",
+        "d": "All the above statements are false."
       },
       "explanations": {
         "a": "Explanation 1  <a href='www.google.com'>here</a>",
@@ -135,13 +130,12 @@
     },
 
       {
-
-      "question": "8. IGBT is capable of blocking:",
+      "question": "8. SCR is capable of blocking:",
       "answers": {
-        "a": "neither positive nor negative collector-to-emitter voltages.",
-        "b": "only positive collector-to-emitter voltages.",
-        "c": "only negative collector-to-emitter voltages.",
-        "d": "both positive and negative collector-to-emitter voltages."
+        "a": "neither positive nor negative anode-to-cathode voltages.",
+        "b": "only positive anode-to-cathode voltages.",
+        "c": "only negative anode-to-cathode voltages.",
+        "d": "both positive and negative anode-to-cathode voltages."
       },
       "explanations": {
         "a": "Explanation 1  <a href='www.google.com'>here</a>",
