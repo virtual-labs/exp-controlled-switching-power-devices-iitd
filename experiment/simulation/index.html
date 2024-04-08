@@ -13,7 +13,6 @@
             margin: 0;
         }
     </style>
-    <button>click</button>
 </head>
 <body>
     <iframe id="iframe" src frameborder="0"></iframe>
@@ -34,10 +33,10 @@
 
         let btn = document.querySelector("button")
         let idx = 0
-        btn.onclick = ()=>{
-            iframe.attributes['src'].value = paths[idx++]
-        }
-        btn.click()
+        // btn.onclick = ()=>{
+        //     iframe.attributes['src'].value = paths[idx++]
+        // }
+        // btn.click()
 
         function setIframeSrc(path){
             StepDone.goto = ""

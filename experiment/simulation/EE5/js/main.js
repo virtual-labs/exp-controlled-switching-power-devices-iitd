@@ -1090,9 +1090,9 @@ const Scenes = {
       //! * Required Elements
 
       Scenes.items.new_select_option_full.set(30,0, 404, 900).zIndex(1)
-      Scenes.items.new_select_option_1.set(310,36, 98, 550).zIndex(2)
-      Scenes.items.new_select_option_2.set(330,152, 100, 600).zIndex(2)
-      Scenes.items.new_select_option_3.set(330,272, 102, 570).zIndex(2)
+      Scenes.items.new_select_option_1.set(212,28,108,653).zIndex(2)
+      Scenes.items.new_select_option_2.set(246,150,106,684).zIndex(2)
+      Scenes.items.new_select_option_3.set(221,270,106,677).zIndex(2)
     
 
       // ! onclicks for all options
