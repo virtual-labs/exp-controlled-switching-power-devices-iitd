@@ -93,8 +93,46 @@
       "difficulty": "beginner"
     },
 
+    { 
+
+      "question": "6. A forward biased MOSFET comes into ON-state by?",
+      "answers": {
+        "a": "Allowing Drain current (I<sub>D</sub>)",
+        "b": "Applying Drain-to-Source voltage (V<sub>DS</sub>)",
+        "c": "Applying Gate-to-Source voltage (V<sub>GS</sub>)",
+        "d": "Allowing Gate current (I<sub>G</sub>)"
+      },
+      "explanations": {
+        "a": "Explanation 1  <a href='www.google.com'>here</a>",
+        "b": "Explanation 2",
+        "c": "Explanation 2",
+        "d": "Explanation 2"
+      },
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+
+      {
+
+      "question": "7. In comparison to IGBT the losses in MOSFET are?",
+      "answers": {
+        "a": "Lower",
+        "b": "Higher",
+        "c": "Almost equal",
+        "d": "Double"
+      },
+      "explanations": {
+        "a": "Explanation 1  <a href='www.google.com'>here</a>",
+        "b": "Explanation 2",
+        "c": "Explanation 2",
+        "d": "Explanation 2"
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+
       {    
-      "question": "6. Reliable method for firing an SCR is?",
+      "question": "8. Reliable method for firing an SCR is?",
       "answers": {
         "a": "High dv/dt",
         "b": "Continuous gate signal",
@@ -112,7 +150,7 @@
     },
 
       {
-      "question": "7. In practice, the correct method of turning-ON a SCR is?",
+      "question": "9. In practice, the correct method of turning-ON a SCR is?",
       "answers": {
         "a": "Increasing the anode-to-cathode voltage (v<sub>AK</sub>) till it reaches a value equal to or above forward breakover voltage (v<sub>BO</sub>).",
         "b": "The anode-to-cathode voltage (v<sub>AK</sub>) is maintained below the breakover voltage (v<sub>BO</sub>) and a positive voltage between the gate and cathode (V<sub>g</sub>) is applied across SCR.",
@@ -130,7 +168,7 @@
     },
 
       {
-      "question": "8. How can a conducting SCR be turned-OFF?",
+      "question": "10. How can a conducting SCR be turned-OFF?",
       "answers": {
         "a": "By application of negative anode current (i<sub>A</sub>) or negative anode-to-cathode voltage (v<sub>AK</sub>).",
         "b": "By application of negative gate current (I<sub>g</sub>).",
@@ -144,6 +182,45 @@
         "d": "Explanation 2"
       },
       "correctAnswer": "a",
+      "difficulty": "beginner"
+    },
+
+
+    {
+      
+      "question": "11. An IGBT is in ON- state. It is observed that with increasing collector-to-emitter voltage (V<sub>CE</sub>) the collector current (I<sub>C</sub>) is almost constant. Which region is the IGBT operating in?",
+      "answers": {
+        "a": "Cutoff",
+        "b": "Linear",
+        "c": "Saturation",
+        "d": "Reverse blocking"
+      },
+      "explanations": {
+        "a": "Explanation 1  <a href='www.google.com'>here</a>",
+        "b": "Explanation 2",
+        "c": "Explanation 2",
+        "d": "Explanation 2"
+      },
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+        
+    {
+
+      "question": "12. When compared to MOSFET  the time required to turn- OFF an IGBT is?",
+      "answers": {
+        "a": "Almost equal",
+        "b": "Lower",
+        "c": "Higher",
+        "d": "Half"
+      },
+      "explanations": {
+        "a": "Explanation 1  <a href='www.google.com'>here</a>",
+        "b": "Explanation 2",
+        "c": "Explanation 2",
+        "d": "Explanation 2"
+      },
+      "correctAnswer": "c",
       "difficulty": "beginner"
     }
 
