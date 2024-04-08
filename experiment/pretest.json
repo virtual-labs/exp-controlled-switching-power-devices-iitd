@@ -18,10 +18,49 @@
       "correctAnswer": "c",
       "difficulty": "beginner"
     },
+
+    {
+   
+      "question": "2. Select the false statement:",
+      "answers": {  
+        "a": "IGBT has three terminals: Collector, Emitter and Gate.",
+        "b": "IGBT is a four-layer semiconductor device.",
+        "c": "IGBT allows current in either directions.",
+        "d": "IGBT has three junctions."
+      },
+      "explanations": {
+        "a": "Explanation 1  <a href='www.google.com'>here</a>",
+        "b": "Explanation 2",
+        "c": "Explanation 2",
+        "d": "Explanation 2"
+      },
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+      
       
     {
 
-      "question": "2. SCR has a:",
+      "question": "3. The properties of IGBT are a combination of which of the following two devices?",
+      "answers": {
+        "a": "MOSFET and SCR",
+        "b": "SCR and TRIAC",
+        "c": "MOSFET and BJT",
+        "d": "BJT and TRIAC"
+      },
+      "explanations": {
+        "a": "Explanation 1  <a href='www.google.com'>here</a>",
+        "b": "Explanation 2",
+        "c": "Explanation 2",
+        "d": "Explanation 2"
+      },
+      "correctAnswer": "a",
+      "difficulty": "beginner"
+    },      
+      
+    {
+
+      "question": "4. SCR has a:",
       "answers": {
         "a": "PNPN structure",
         "b": "PNP structure",
@@ -40,7 +79,7 @@
     
     {
 
-      "question": "3. Identify the three terminals of SCR- anode (A), cathode (K) and gate (G) in the SCR figure given below from left-to-right.<br><center><img src='images/pre2.png' height='300px'></center><br>",
+      "question": "5. Identify the three terminals of SCR- anode (A), cathode (K) and gate (G) in the SCR figure given below from left-to-right.<br><center><img src='images/pre2.png' height='300px'></center><br>",
       "answers": {
         "a": "(i)- cathode, (ii)- anode, (iii)- gate",
         "b": "(i)- anode, (ii)- cathode, (iii)- gate",
@@ -58,7 +97,7 @@
     },
         
     {
-      "question": "4. In order to trigger or turn- ON a SCR, the potential difference between anode-to-cathode must be:",
+      "question": "6. In order to trigger or turn- ON a SCR, the potential difference between anode-to-cathode must be:",
       "answers": {
         "a": "Positive",
         "b": "Negative",
@@ -76,7 +115,7 @@
     },
 
       {
-      "question": "5. Which of the following statements differentiate the SCR from a diode?",
+      "question": "7. Which of the following statements differentiate the SCR from a diode?",
       "answers": {
         "a": "It blocks current when reverse biased.",
         "b": "It conducts when forward biased at a given gate signal.",
@@ -94,7 +133,7 @@
     },
    
       {    
-      "question": "6. The correct symbolic representation of an SCR is?",
+      "question": "8. The correct symbolic representation of an SCR is?",
       "answers": {
         "a": "<img src='images/pre3.png' height='70px'>",
         "b": "<img src='images/pre4.png' height='70px'>",
@@ -112,7 +151,7 @@
     },
 
       {
-      "question": "7. Choose the correct statement.",
+      "question": "9. Choose the correct statement.",
       "answers": {
         "a": "SCR is a fully controlled device.",
         "b": "SCR is a semi-controlled device.",
@@ -130,7 +169,7 @@
     },
 
       {
-      "question": "8. SCR is capable of blocking:",
+      "question": "10. SCR is capable of blocking:",
       "answers": {
         "a": "neither positive nor negative anode-to-cathode voltages.",
         "b": "only positive anode-to-cathode voltages.",
@@ -144,6 +183,44 @@
         "d": "Explanation 2"
       },
       "correctAnswer": "d",
+      "difficulty": "beginner"
+    },
+
+    {
+
+      "question": "11. Which of the following statements is correct?",
+      "answers": {
+        "a": "MOSFET is a voltage controlled device",
+        "b": "Switching speed of IGBT is faster than MOSFET",
+        "c": "MOSFET is a current controlled device",
+        "d": "MOSFET is suitable for line frequency AC-DC rectifiers"
+      },
+      "explanations": {
+        "a": "Explanation 1  <a href='www.google.com'>here</a>",
+        "b": "Explanation 2",
+        "c": "Explanation 2",
+        "d": "Explanation 2"
+      },
+      "correctAnswer": "a",
+      "difficulty": "beginner"
+    },
+
+      {
+
+      "question": "12. Which of the following is the correct for MOSFET from application point of view?",
+      "answers": {
+        "a": "High power, high frequency",
+        "b": "Low power, high frequency",
+        "c": "Low power, low frequency",
+        "d": "High power, low frequency"
+      },
+      "explanations": {
+        "a": "Explanation 1  <a href='www.google.com'>here</a>",
+        "b": "Explanation 2",
+        "c": "Explanation 2",
+        "d": "Explanation 2"
+      },
+      "correctAnswer": "b",
       "difficulty": "beginner"
     }
 
