@@ -1,13 +1,32 @@
 {
   "version": 2.0,
   "questions": [
+    {    
+      "question": "1. Select the false statement:",
+      "answers": {  
+        "a": "SCR has three terminals: anode, cathode and gate.",
+        "b": "SCR is a four-layer semiconductor device.",
+        "c": "SCR allows current in either directions.",
+        "d": "SCR has three junctions."
+      },
+      "explanations": {
+        "a": "Explanation 1  <a href='www.google.com'>here</a>",
+        "b": "Explanation 2",
+        "c": "Explanation 2",
+        "d": "Explanation 2"
+      },
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+      
     {
-      "question": "This is a Sample Question 1?",
+
+      "question": "2. SCR has a:",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+        "a": "PNPN structure",
+        "b": "PNP structure",
+        "c": "NPNP structure",
+        "d": "NPN structure"
       },
       "explanations": {
         "a": "Explanation 1  <a href='www.google.com'>here</a>",
@@ -18,13 +37,15 @@
       "correctAnswer": "a",
       "difficulty": "beginner"
     },
+    
     {
-      "question": "This is a Sample Question 2?",
+
+      "question": "3. Identify the three terminals of SCR- anode (A), cathode (K) and gate (G) in the SCR figure given below from left-to-right.<br><center><img src='images/pre2.png' height='300px'></center><br>",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+        "a": "(i)- cathode, (ii)- anode, (iii)- gate",
+        "b": "(i)- anode, (ii)- cathode, (iii)- gate",
+        "c": "(i)- gate, (ii)- anode, (iii)- cathode",
+        "d": "(i)- gate, (ii)- cathode, (iii)- anode"
       },
       "explanations": {
         "a": "Explanation 1  <a href='www.google.com'>here</a>",
@@ -32,8 +53,99 @@
         "c": "Explanation 2",
         "d": "Explanation 2"
       },
-      "correctAnswer": "c",
+      "correctAnswer": "a",
+      "difficulty": "beginner"
+    },
+        
+    {
+      "question": "4. In order to trigger or turn- ON a SCR, the potential difference between anode-to-cathode must be:",
+      "answers": {
+        "a": "Positive",
+        "b": "Negative",
+        "c": "Zero",
+        "d": "Equal to gate-to-cathode voltage"
+      },
+      "explanations": {
+        "a": "Explanation 1  <a href='www.google.com'>here</a>",
+        "b": "Explanation 2",
+        "c": "Explanation 2",
+        "d": "Explanation 2"
+      },
+      "correctAnswer": "a",
+      "difficulty": "beginner"
+    },
+
+      {
+      "question": "5. Which of the following statements differentiate the SCR from a diode?",
+      "answers": {
+        "a": "It blocks current when reverse biased.",
+        "b": "It conducts when forward biased at a given gate signal.",
+        "c": "It conducts when forward biased without any gate signal.",
+        "d": "It conducts when reverse biased at a given gate signal."
+      },
+      "explanations": {
+        "a": "Explanation 1  <a href='www.google.com'>here</a>",
+        "b": "Explanation 2",
+        "c": "Explanation 2",
+        "d": "Explanation 2"
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+   
+      {    
+      "question": "6. The correct symbolic representation of an SCR is?",
+      "answers": {
+        "a": "<img src='images/pre3.png' height='70px'>",
+        "b": "<img src='images/pre4.png' height='70px'>",
+        "c": "<img src='images/pre5.png' height='70px'>",
+        "d": "<img src='images/pre6.png' height='70px'>"
+      },
+      "explanations": {
+        "a": "Explanation 1  <a href='www.google.com'>here</a>",
+        "b": "Explanation 2",
+        "c": "Explanation 2",
+        "d": "Explanation 2"
+      },
+      "correctAnswer": "d",
+      "difficulty": "beginner"
+    },
+
+      {
+      "question": "7. Choose the correct statement.",
+      "answers": {
+        "a": "SCR is a fully controlled device.",
+        "b": "SCR is a semi-controlled device.",
+        "c": "SCR is a uncontrolled device.",
+        "d": "All the above statements are false."
+      },
+      "explanations": {
+        "a": "Explanation 1  <a href='www.google.com'>here</a>",
+        "b": "Explanation 2",
+        "c": "Explanation 2",
+        "d": "Explanation 2"
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+
+      {
+      "question": "8. SCR is capable of blocking:",
+      "answers": {
+        "a": "neither positive nor negative anode-to-cathode voltages.",
+        "b": "only positive anode-to-cathode voltages.",
+        "c": "only negative anode-to-cathode voltages.",
+        "d": "both positive and negative anode-to-cathode voltages."
+      },
+      "explanations": {
+        "a": "Explanation 1  <a href='www.google.com'>here</a>",
+        "b": "Explanation 2",
+        "c": "Explanation 2",
+        "d": "Explanation 2"
+      },
+      "correctAnswer": "d",
       "difficulty": "beginner"
     }
+
   ]
 }
