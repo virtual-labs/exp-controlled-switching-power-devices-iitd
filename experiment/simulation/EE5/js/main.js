@@ -878,7 +878,6 @@ const Scenes = {
             instructionImg = Scenes.items.part_1_instruction_box.set(70,100, 404, 800).hide();
             procedureImg = Scenes.items.part_1_procedure_box.set(-60, 140,504, 900 ).hide();
             nomenclatureImg = Scenes.items.part_1_nomenclature_box.set(-80, 100, 504, 950).hide();
-
             break;
 
       //scr using using oscilloscope
@@ -1412,110 +1411,17 @@ const Scenes = {
       //! Graph Part
       function partCalculation(){
         // for recrod btn
-        let plotBtnIdx = 1
-        Scenes.items.part_1_calculations.set(-15,-70,480,983)
+        Scenes.items.part_1_calculations.set(0,-70,480,948)
         Scenes.items.btn_procedure.set(790+5,-72,37).zIndex(10)
         Scenes.items.btn_nomenclature.set(610+5,-72,37,160).zIndex(10)
-        Scenes.items.btn_plot.set(512+5,-74,40,85).zIndex(10)
-        let graph_l = 516,
-        graph_t = -35,
-        graph_h = 450,
-        graph_w = 430
-        Scenes.items.graph_0_initial.set(graph_l,graph_t,graph_h,graph_w).zIndex(10)
-        let graphs = [
-          Scenes.items.graph_1_2500.set(graph_l,graph_t,graph_h,graph_w).zIndex(11).hide(),
-          Scenes.items.graph_2_750.set(graph_l,graph_t,graph_h,graph_w).zIndex(12).hide(),
-          Scenes.items.graph_3_150.set(graph_l,graph_t,graph_h,graph_w).zIndex(13).hide(),
-          Scenes.items.graph_4_50.set(graph_l,graph_t,graph_h,graph_w).zIndex(14).hide()
-        ]
-        
-        // step tutorial
-        Dom.setBlinkArrowRed(true,10,320,35,null,-90).play()
-        setCC("Click on the Gate resistance slider and set it to 25 kilo ohms")
-        
-        // * Calling slider
-        sliders.showSliderFor("1_1")
-
-        // * assume tempTitle10 as a btn record
-        let btn_record = sliders.btn_record.item
-        
-        // and other blink arrow is on sliders.js
-
-        // ! btn_plot
-        Scenes.items.btn_plot.item.onclick = ()=>{
+        setTimeout(() => {
           Dom.setBlinkArrowRed(-1)
-          let vGs_value = sliders.slider_vGs.getValue()
-          let vIn_value = sliders.slider_vIn.getValue()
-          let R_value = sliders.slider_R.getValue()
-
-          updateValues(vIn_value,vGs_value,R_value)
-          console.log(vGs_value)
-
-          switch(Number(vGs_value)){
-            case 25:
-              Dom.setBlinkArrowRed(-1)
-              Anime.fadeIn(graphs[plotBtnIdx].show().opacity(0).item)
-              setCC("Reverse blocking and forward blocking characteristics are displayed on the DSO screen. For better visual understanding, zoomed version of the DSO screen is also included just below.")
-              setTimeout(()=>{
-                Dom.setBlinkArrowRed(true,10,320,35,null,-90).play()
-                setCC("Generate similar type of characteristics with different gate resistances by clicking the gate slider. Set gate resistance to 750 ohms which corresponds to 2 milli ampere gate current.")
-              },15000)
-              break;
-            case 750:
-              Anime.fadeIn(graphs[plotBtnIdx].show().opacity(0).item)
-              setTimeout(()=>{
-                Dom.setBlinkArrowRed(true,10,320,35,null,-90).play()
-                setCC("To generate one more characteristics, set gate resistance slider to to 150 ohms and click on the plot icon.")
-              },5000)
-            
-              break
-            case 150:
-              Anime.fadeIn(graphs[plotBtnIdx].show().opacity(0).item)
-              setTimeout(()=>{
-                Dom.setBlinkArrowRed(true,10,320,35,null,-90).play()
-              },5000)
-            
-              break
-            case 50:
-              Anime.fadeIn(graphs[plotBtnIdx].show().opacity(0).item)
-              setTimeout(()=>{
-                setCC("From this experiment, it is clear that the v i characteristics of SCR depends on the gate current magnitude. Higher the gate current, lesser is the forward breakover voltage.")
-                // Dom.setBlinkArrowRed(true,10,320,35,null,-90).play()
-
-                setTimeout(()=>{
-                  // Dom.setBlinkArrow(true, 790, 544).play();
-                  // setCC("Click 'Next' to go to next step");
-                  setIsProcessRunning(false);
-                  Scenes.currentStep = 2
-                },12000)
-
-              },5000)
-            
-              break
-
-          }
-          plotBtnIdx++
-        }
-        
-        // ! btn_record onclick
-        plotBtnIdx = 0
-        btn_record.onclick = ()=>{
-          let vGs_value = sliders.slider_vGs.getValue()
-          let vIn_value = sliders.slider_vIn.getValue()
-          let R_value = sliders.slider_R.getValue()
-
-          updateValues(vIn_value,vGs_value,R_value)
-          
-          // end the slide
-          if(vGs_value==last_vGs_value){
-            Dom.setBlinkArrowRed(-1)
-            Dom.setBlinkArrow(true, 790, 544).play();
-            setCC("Click 'Next' to go to next step");
-            setIsProcessRunning(false);
-            // for going to the second step
-            Scenes.currentStep = 2
-          }
-        }
+          Dom.setBlinkArrow(true, 790, 544).play();
+          setCC("Click 'Next' to go to next step");
+          setIsProcessRunning(false)
+          // for going to the second step
+          Scenes.currentStep = 3
+        }, 5000);
       }
 
       // todo remove
@@ -1832,7 +1738,7 @@ const Scenes = {
             setCC("Click 'Next' to go to next step");
             setIsProcessRunning(false);
             // for going to the second step
-            Scenes.currentStep = 2
+            Scenes.currentStep = 3
           }
         }
       }
