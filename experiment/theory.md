@@ -513,7 +513,7 @@ c)  In the saturation region, the Collector current remains almost constant for 
 
 <div style="float: left; width:100%;"><br>
 
-### MOSFET
+### 3) MOSFET
 
 
 **Representation of MOSFET:**
