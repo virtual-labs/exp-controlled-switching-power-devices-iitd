@@ -1,5 +1,6 @@
 ### Theory
 
+### 1) SCR
 
 **Representation of SCR:**
 
@@ -406,3 +407,211 @@ Current Probe
   </tr>
 </table>
 
+### 2) IGBT
+
+**Representation of IGBT:**
+
+Fig. 7(a) and 7(b) show the symbolic representation of IGBT and a typical IGBT package available in market.
+
+<br>
+
+<table border="0" align="center" style="width:100%; border:none;">
+  <tr>
+<td style="width:50%">
+<center>
+
+<br>
+<img src="images/ith1.png">
+<br><br>
+Fig. 7(a). Symbolic representation of IGBT.
+<br><br>
+</center>
+</td>
+<td style="width:50%">
+  
+<center>
+
+<br>
+<img src="images/ith2.png">
+<br><br>
+Fig. 7(b). A typical IGBT package.
+<br><br>
+</center> 
+    </td>
+  </tr>
+</table>
+<br>
+
+<br>
+<div style="float: left; width:100%;"><br>
+  
+**Introduction to IGBT:**
+
+Fig. 8 shows the internal structure of an IGBT. Some of the key features of IGBT are compiled and given below.
+
+</div>
+
+<center>
+<img src="images/ith3.png" height="350px">
+
+<br>
+Fig. 8. Internal structure of IGBT.
+<br>
+</center>
+<br>
+
+1.  Insulated-Gate Bipolar Transistor (IGBT) is a semiconductor power device. It combines the advantages of a BJT and a MOSFET. It has high input impedance, like MOSFET, and low on-state conduction losses, like BJT. However, it shows higher switching time especially during the turn-off transition.<br>
+
+2.  It has a four PNPN layer structure: a) Two P-type doped (p) layers. b) Two N-type doped layers- one is heavy doped (n+) and the other is lightly doped (n-). It has three junctions: n+-p (J<sub>1</sub>), p-n- (J<sub>2</sub>) and n--p (J<sub>3</sub>).<br>
+3.  The  SCR has three external terminals namely: Anode (A), Cathode (K) and Gate (G).<br><br>
+
+
+**Operating modes of IGBT:**
+<br>
+
+1.  Forward Blocking State: An IGBT is a voltage controlled device. When the Collector voltage is made more positive with respect to the Emitter and the Gate current is zero, the Collector current is negligible.
+
+2.  Forward Conducting State: When the Gate voltage is made more positive than the Emitter voltage, n carriers are drawn into the p-channel near the gate region; this results in a forward bias of the n-p and p-n junctions. Current freely flows from collector to emitter.<br>
+During forward conduction, the IGBT will operate in any one of the following states, depending on the values of Collector-to-Emitter voltage (VCE) and the Gate voltage (VGE) values: Cut-off region, Active region or Saturation region.
+  
+3.  Once the SCR starts conducting, gate loses control over the device. It continues conducting even after gate signal is removed. However, if the forward anode current (I<sub>A</sub>) is reduced below a level known as the ‘holding current’ (I<sub>H</sub>), the SCR goes to blocking state. The holding current is less than the latching current.
+
+4.  Reverse Blocking State:  When the Emitter voltage is higher with respect to the Collector voltage, no current can flow through the device even with gate current applied.<br><br>
+
+
+
+**Characteristics of the IGBT:**
+
+There are two important characteristics defined for an IGBT:
+
+1.  Output Characteristics: It is the plot between the Collector-to-Emitter voltage (VCE) and the Collector current (IC) for a fixed Gate-to-Emitter voltage (VGE). The circuit diagram to plot the characteristics is given in Fig. 9. Voltage ‘VCE’ is measured by the voltmeter while the ammeter measures the current ‘IC’.<br><br>
+
+<center>
+<img src="images/ith4.png" height="350px">
+
+<br>
+Fig. 9. Circuit diagram for Output characteristics.
+<br>
+</center>
+<br> 
+
+The output characteristics of IGBT is shown in Fig. 10.
+
+<center>
+<img src="images/ith5.png" height="350px">
+
+<br>
+Fig. 10. Output characteristics of IGBT.
+<br>
+</center>
+<br> 
+IGBT has three operating regions: Cutoff region, Linear region and Saturation region as shown in Fig. 11. <br><br>
+
+a)  In cutoff region, the Gate voltage is lower than the threshold (V<sub>T</sub>) and the IGBT doesn’t conduct.<br>
+b)  In linear region, the Collector current I<sub>C</sub> varies in proportion to the Collector-to-Emitter voltage V<sub>CE</sub>. IGBT is operated in the linear region for switching actions.<br>
+c)  In the saturation region, the Collector current remains almost constant for any increase in the value of V<sub>CE</sub>.<br>
+
+<div style="float: left; width:100%;"><br>
+
+### MOSFET
+
+
+**Representation of MOSFET:**
+
+Fig. 12(a) and 12(b) show the symbolic representation of MOSFET and a typical MOSFET package available in market.
+
+<br>
+
+<table border="0" align="center" style="width:100%; border:none;">
+  <tr>
+<td style="width:50%">
+<center>
+
+<br>
+<img src="images/mth1.png">
+<br><br>
+Fig. 12(a). Symbolic representation of MOSFET
+<br><br>
+</center>
+</td>
+<td style="width:50%">
+  
+<center>
+
+<br>
+<img src="images/mth2.png">
+<br><br>
+Fig. 12(b). A typical MOSFET package
+<br><br>
+</center> 
+    </td>
+  </tr>
+</table>
+<br>
+
+<br>
+<div style="float: left; width:100%;"><br>
+  
+**Introduction to MOSFET:**
+
+Fig. 13 shows the internal structure of MOSFET. Some of the key features of MOSFET are compiled and given below.
+
+</div>
+
+<center>
+<img src="images/mth3.png" height="350px">
+
+<br>
+Fig. 13. Internal structure of MOSFET.
+<br>
+</center>
+<br>
+
+1.  It is a three-terminal majority carrier device. It exhibits high switching speed, low rise and fall time. It is suitable for low-power, high-frequency switching applications such as DC-DC converters.<br>
+
+2.  It is a voltage-controlled device and the ‘Gate circuit’ requires only a small amount of current for it to start conducting (ON-State).<br>
+
+3.  There are two types of MOSFETs: a) Depletion type, b) Enhancement type. Both have three terminals: Drain (D), Source (S) and Gate (G).<br>
+
+4.  Enhancement-type MOSFET works in two modes: ON-state (conducting) and OFF-state (blocking), controlled by the PWM signal given to the Gate terminal.<br>
+
+5.  For gate-to-source voltage more than threshold (V<sub>T</sub>), Enhancement-type MOSFET conducts. At zero gate voltage, it remains in OFF-state. Hence, it is generally used as switching device in power converters/ power conversion applications.<br>    
+
+
+**Operating modes of MOSFET switching device:**
+<br>
+
+1.  Forward Blocking State (v<sub>DS</sub> > 0, v<sub>GS</sub> = 0): A MOSFET is a voltage controlled device. When Drain-to-Source voltage (v<sub>DS</sub>) is positive, both the junctions remain reverse biased. MOSFET doesn’t conduct.
+
+2.  Forward Conducting State (v<sub>DS</sub> > 0, v<sub>GS</sub> ≥ V<sub>T</sub>): When Drain-to-Source voltage (v<sub>DS</sub>) is positive, with Gate-to-Source voltage (v<sub>GS</sub>) more than threshold voltage, the MOSFET starts conducting and hence current flows from drain to source. 
+During forward conduction, the MOSFET will operate in any one of the following states, depending on the values of drain-to-source voltage (V<sub>DS</sub>) and the Gate voltage (V<sub>GS</sub>) values: Cut-off region, linear region and Saturation region.
+  
+3.  Reverse Blocking State (v<sub>DS</sub> < 0):  When the drain-to-source voltage (V<sub>DS</sub>) is negative the junctions become reverse biased and MOSFET stops conducting.<br><br>
+
+**Characteristics of the MOSFET:**
+
+There are two important characteristics defined for an MOSFET:
+
+Output Characteristics: It is the plot between the Drain-to-Source voltage (V<sub>DS</sub>) and the Drain current (I<sub>D</sub>) for a fixed Gate-to-Source voltage (V<sub>GS</sub>). The circuit diagram to plot these characteristics is given in Fig. 14. Voltage ‘V<sub>DS</sub>’ is measured by the voltmeter while the ammeter measures the current ‘I<sub>D</sub>’.<br><br>
+
+<center>
+<img src="images/mth4.png" height="350px">
+
+<br>
+Fig. 14. Circuit diagram for output characteristics.
+<br>
+</center>
+<br> 
+
+The output characteristics of MOSFET is shown in Fig. 14.
+
+<center>
+<img src="images/mth5.png" height="350px">
+
+<br>
+Fig. 14. Output characteristics of MOSFET.
+<br>
+</center>
+<br> 
+
+MOSFET has three operating regions: Cutoff region, Linear region and Saturation region as shown in Fig. 15.
