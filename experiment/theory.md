@@ -609,7 +609,7 @@ The output characteristics of MOSFET is shown in Fig. 14.
 <img src="images/mth5.png" height="350px">
 
 <br>
-Fig. 14. Output characteristics of MOSFET.
+Fig. 15. Output characteristics of MOSFET.
 <br>
 </center>
 <br> 
