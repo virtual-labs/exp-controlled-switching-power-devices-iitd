@@ -10,10 +10,10 @@
         "d": "Negligible"
       },
       "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
+        "a": "Explanation 1: The latching current is always higher than the holding current.",
         "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+        "c": "Explanation 3",
+        "d": "Explanation 4"
       },
       "correctAnswer": "a",
       "difficulty": "beginner"
@@ -28,10 +28,10 @@
         "d": "Gate voltage (v<sub>g</sub>)-vs-Gate Current (I<sub>g</sub>)"
       },
       "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+        "a": "Explanation 1",
+        "b": "Explanation 2: v-i characteristics shows the relation between the voltage across anode-to-cathode and the anode current.",
+        "c": "Explanation 3",
+        "d": "Explanation 4"
       },
       "correctAnswer": "b",
       "difficulty": "beginner"
@@ -47,10 +47,10 @@
         "d": "Forward breakover current"
       },
       "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
+        "a": "Explanation 1",
         "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+        "c": "Explanation 3: Holding current is the minimum current required to keep SCR in conduction mode.",
+        "d": "Explanation 4"
       },
       "correctAnswer": "c",
       "difficulty": "beginner"
@@ -66,10 +66,10 @@
         "d": "'J<sub>1</sub>, J<sub>2</sub>' are forward biased while 'J<sub>3</sub>' is reverse biased"
       },
       "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
+        "a": "Explanation 1",
         "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+        "c": "Explanation 3: During forward blocking J<sub>1</sub> and J<sub>2</sub> are forward biased because a positive Anode-to-Cathode voltage is applied. Whereas J<sub>2</sub>  is reverse biased due to the absence of gate current.",
+        "d": "Explanation 4"
       },
       "correctAnswer": "c",
       "difficulty": "beginner"
@@ -84,10 +84,10 @@
         "d": "SCR continues to conduct if anode current is maintained above holding current."
       },
       "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
+        "a": "Explanation 1",
         "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+        "c": "Explanation 3",
+        "d": "Explanation 4: SCR is a semi-controlled device i.e. once turned- ON (by gate current), it continues conducting even when gate pulse is removed (provided anode current is greater than the holding current)."
       },
       "correctAnswer": "d",
       "difficulty": "beginner"
@@ -103,10 +103,10 @@
         "d": "Allowing Gate current (I<sub>G</sub>)"
       },
       "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
+        "a": "Explanation 1",
         "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+        "c": "Explanation 3: MOSFET is a voltage controlled device. Applying a positive Gate-to-Source voltage turns- ON the MOSFET.",
+        "d": "Explanation 4"
       },
       "correctAnswer": "c",
       "difficulty": "beginner"
@@ -122,10 +122,10 @@
         "d": "Double"
       },
       "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+        "a": "Explanation 1",
+        "b": "Explanation 2: IGBT has lower conduction losses compared to MOSFET.",
+        "c": "Explanation 3",
+        "d": "Explanation 4"
       },
       "correctAnswer": "b",
       "difficulty": "beginner"
@@ -140,10 +140,10 @@
         "d": "High di/dt"
       },
       "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
+        "a": "Explanation 1",
         "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+        "c": "Explanation 3: SCR is a unidirectional device and allows current to flow only from Anode to Cathode when sufficient Gate current or firing pulses is applied.",
+        "d": "Explanation 4"
       },
       "correctAnswer": "c",
       "difficulty": "beginner"
@@ -158,10 +158,10 @@
         "d": "Positive anode-to-cathode voltage (v<sub>AK</sub>) automatically turns- ON the SCR."
       },
       "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+        "a": "Explanation 1",
+        "b": "Explanation 2: SCR is turned- ON by forward biasing it and giving it sufficient gate current.",
+        "c": "Explanation 3",
+        "d": "Explanation 4"
       },
       "correctAnswer": "b",
       "difficulty": "beginner"
@@ -176,10 +176,10 @@
         "d": "All of the above methods are correct."
       },
       "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
+        "a": "Explanation 1: Applying negative anode current or negative anode-to-cathode voltage reverse biases the SCR, turning it OFF.",
         "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+        "c": "Explanation 3",
+        "d": "Explanation 4"
       },
       "correctAnswer": "a",
       "difficulty": "beginner"
@@ -196,10 +196,10 @@
         "d": "Reverse blocking"
       },
       "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
+        "a": "Explanation 1",
         "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+        "c": "Explanation 3: In saturation mode, the IGBT current remains constant even when Collector-to-emitter voltage is increased.",
+        "d": "Explanation 4"
       },
       "correctAnswer": "c",
       "difficulty": "beginner"
@@ -215,10 +215,10 @@
         "d": "Half"
       },
       "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
+        "a": "Explanation 1",
         "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+        "c": "Explanation 3: Switching time of IGBT is greater than MOSFET due to the presence of tail current.",
+        "d": "Explanation 4"
       },
       "correctAnswer": "c",
       "difficulty": "beginner"
