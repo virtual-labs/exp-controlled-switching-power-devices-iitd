@@ -10,10 +10,10 @@
         "d": "SCR has three junctions."
       },
       "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
+        "a": "Explanation 1",
         "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+        "c": "Explanation 3: SCR is a unidirectional device and allows current to flow only from Anode to Cathode when firing pulses are given.",
+        "d": "Explanation 4"
       },
       "correctAnswer": "c",
       "difficulty": "beginner"
@@ -29,10 +29,10 @@
         "d": "IGBT has three junctions."
       },
       "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
+        "a": "Explanation 1",
         "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+        "c": "Explanation 3: IGBT is a unidirectional device and allows current to flow only from Collector to Emitter when sufficient Gate-to-Emitter voltage is applied.",
+        "d": "Explanation 4"
       },
       "correctAnswer": "c",
       "difficulty": "beginner"
@@ -44,17 +44,17 @@
       "question": "3. The properties of IGBT are a combination of which of the following two devices?",
       "answers": {
         "a": "MOSFET and SCR",
-        "b": "SCR and TRIAC",
-        "c": "MOSFET and BJT",
+        "b": "MOSFET and BJT",
+        "c": "SCR and TRIAC",
         "d": "BJT and TRIAC"
       },
       "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+        "a": "Explanation 1",
+        "b": "Explanation 2: IGBT structure is a combination of MOSFET (at the input side) and BJT (output side).",
+        "c": "Explanation 3",
+        "d": "Explanation 4"
       },
-      "correctAnswer": "a",
+      "correctAnswer": "b",
       "difficulty": "beginner"
     },      
       
@@ -68,10 +68,10 @@
         "d": "NPN structure"
       },
       "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
+        "a": "Explanation 1: SCR is made up of four layers of alternating P-type and N-type silicon semiconductors, forming a PNPN structure.",
         "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+        "c": "Explanation 3",
+        "d": "Explanation 4"
       },
       "correctAnswer": "a",
       "difficulty": "beginner"
@@ -87,10 +87,10 @@
         "d": "(i)- gate, (ii)- cathode, (iii)- anode"
       },
       "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
+        "a": "Explanation 1: Standard nomenclature is adopted.",
         "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+        "c": "Explanation 3",
+        "d": "Explanation 4"
       },
       "correctAnswer": "a",
       "difficulty": "beginner"
@@ -105,10 +105,10 @@
         "d": "Equal to gate-to-cathode voltage"
       },
       "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
+        "a": "Explanation 1: SCR turns-ON or goes into forward conduction mode when a positive voltage is applied between the anode and cathode together with positive gate current.",
         "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+        "c": "Explanation 3",
+        "d": "Explanation 4"
       },
       "correctAnswer": "a",
       "difficulty": "beginner"
@@ -123,10 +123,10 @@
         "d": "It conducts when reverse biased at a given gate signal."
       },
       "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+        "a": "Explanation 1",
+        "b": "Explanation 2: A diode conducts when the voltage between the anode and cathode is positive (forward biased). For a SCR to conduct, in addition to positive anode-to-cathode voltage, a sufficient gate current  is also necessary.",
+        "c": "Explanation 3",
+        "d": "Explanation 4"
       },
       "correctAnswer": "b",
       "difficulty": "beginner"
@@ -141,10 +141,10 @@
         "d": "<img src='images/pre6.png' height='70px'>"
       },
       "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
+        "a": "Explanation 1",
         "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+        "c": "Explanation 3",
+        "d": "Explanation 4: Standard nomenclature is adopted."
       },
       "correctAnswer": "d",
       "difficulty": "beginner"
@@ -159,10 +159,10 @@
         "d": "All the above statements are false."
       },
       "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+        "a": "Explanation 1",
+        "b": "Explanation 2: SCR is turned- ON using firing pulses but it cannot be turned- OFF by removing firing pulses. Hence, it a semi-controlled device.",
+        "c": "Explanation 3",
+        "d": "Explanation 4"
       },
       "correctAnswer": "b",
       "difficulty": "beginner"
@@ -177,10 +177,10 @@
         "d": "both positive and negative anode-to-cathode voltages."
       },
       "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
+        "a": "Explanation 1",
         "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+        "c": "Explanation 3",
+        "d": "Explanation 4: SCR is capable of blocking both polarities of anode-to-cathode voltage (V<sub>AK</sub>). During forward blocking it blocks positive V<sub>AK</sub> and during reverse blocking it blocks negative V<sub>AK</sub>."
       },
       "correctAnswer": "d",
       "difficulty": "beginner"
@@ -196,10 +196,10 @@
         "d": "MOSFET is suitable for line frequency AC-DC rectifiers"
       },
       "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
+        "a": "Explanation 1: MOSFET conducts when gate pulses or positive Gate-to-Source voltage is applied. Hence, it is a voltage controlled device.",
         "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+        "c": "Explanation 3",
+        "d": "Explanation 4"
       },
       "correctAnswer": "a",
       "difficulty": "beginner"
@@ -215,10 +215,10 @@
         "d": "High power, low frequency"
       },
       "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+        "a": "Explanation 1",
+        "b": "Explanation 2: MOSFET is capable of operating at high switching frequencies and hence it is used in low power applications.",
+        "c": "Explanation 3",
+        "d": "Explanation 4"
       },
       "correctAnswer": "b",
       "difficulty": "beginner"
