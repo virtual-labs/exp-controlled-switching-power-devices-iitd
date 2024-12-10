@@ -148,6 +148,17 @@ slider_thumb:this.allImgsDom[index++],
 part_2_instruction_box:this.allImgsDom[index++],
 btn_procedure_calculations:this.allImgsDom[index++],
 
+//! Experimental section images added here
+btn_1: this.allImgsDom[index++],
+btn_2: this.allImgsDom[index++],
+btn_click: this.allImgsDom[index++],
+circle: this.allImgsDom[index++],
+frame_1: this.allImgsDom[index++],
+frame_2: this.allImgsDom[index++],
+frame_3: this.allImgsDom[index++],
+menu_page: this.allImgsDom[index++],
+val_vgs: this.allImgsDom[index++],
+val_vin: this.allImgsDom[index++],
 
       // * Question Mark
       domQs1: this.allQsDom[0],

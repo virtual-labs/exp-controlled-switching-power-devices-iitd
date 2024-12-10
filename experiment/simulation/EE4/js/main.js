@@ -255,15 +255,21 @@ function toggleNextBtn() {
   let nextBtn = document.querySelector(".btn-next");
   nextBtn.classList.toggle("btn-deactive");
 }
+const cancelSpeech = ()=>{
+  window.speechSynthesis.cancel()
+  ccQueue = []
+}
+
 const setIsProcessRunning = (value) => {
   // calling toggle the next
-  if (value != isRunning) {
-    toggleNextBtn();
+  if(value != isRunning){
+    toggleNextBtn()
   }
 
   isRunning = value;
-  if (value) {
-    Dom.hideAll();
+  if(value){
+    cancelSpeech()
+    Dom.hideAll()
   }
 };
 
@@ -305,13 +311,16 @@ let student_name = "";
 
 // ! text to audio
 
-const textToSpeach = (text) => {
-  // if(isMute){
-  //   return;
-  // }
+const textToSpeach = (text,speak=true) => {
+  // for filter <sub></sub>
+  text = text.replaceAll("<sub>"," ").replaceAll("</sub>"," ")
   let utterance = new SpeechSynthesisUtterance();
   utterance.text = text;
   utterance.voice = window.speechSynthesis.getVoices()[0];
+  if(isMute || !speak){
+    utterance.volume = 0
+    utterance.rate = 10
+  }
   window.speechSynthesis.speak(utterance);
   return utterance;
 };
@@ -320,27 +329,26 @@ const textToSpeach = (text) => {
 let ccQueue = [];
 // for subtitile
 let ccObj = null;
-function setCC(text = null, speed = 25) {
+function setCC(text = null, speed = 25, speak = true) {
   if (ccObj != null) {
     ccObj.destroy();
   }
-
+  
   let ccDom = get(".steps-subtitle .subtitle");
   ccQueue.push(text);
   ccObj = new Typed(ccDom, {
     strings: ["", ...ccQueue],
     typeSpeed: speed,
-    onStringTyped() {
-      ccQueue.shift();
+    onStringTyped(){
+      ccQueue.shift()
       // if(ccQueue.length != 0){
-      //   setCC(ccQueue.shift())
+      //   setCC(ccQueue.shift())`
       // }
-    },
+    }
   });
-  if (!isMute) textToSpeach(text);
-  return ccDom;
+  let utterance = textToSpeach(text,speak)
+  return utterance
 }
-
 // ! class Dom{} is send to seperate file
 // * for cursor pointer
 function cursorPointer(ele) {
@@ -639,9 +647,20 @@ const Scenes = {
       part_2_procedure : new Dom("part_2_procedure"),
       part_3_nomenclature : new Dom("part_3_nomenclature"),
       part_3_procedure : new Dom("part_3_procedure"),
+      compo_left : new Dom("compo_left"),
       
 
-
+    // Experimental section images added here
+    btn_1: new Dom("btn_1"),
+    btn_2: new Dom("btn_2"),
+    btn_click: new Dom("btn_click"),
+    circle: new Dom("circle"),
+    frame_1: new Dom("frame_1"),
+    frame_2: new Dom("frame_2"),
+    frame_3: new Dom("frame_3"),
+    menu_page: new Dom("menu_page"),
+    val_vgs: new Dom("val_vgs"),
+    val_vin: new Dom("val_vin"),
 
     domQs1: new Dom("domQs1"),
     domQs2: new Dom("domQs2"),
@@ -1500,6 +1519,7 @@ const Scenes = {
         Scenes.items.part_2_conncection_supply_1_red_button.set(144,68,24,22).zIndex(20),
         Scenes.items.part_2_conncection_supply_2_red_button.set(140,306,27,23).zIndex(20),
         Scenes.items.part_1_2_connections_box,
+        Scenes.items.compo_left.set(352, 137, 267),
       ]
 
       let cables = [
@@ -1772,6 +1792,10 @@ const Scenes = {
         if(partConnectionsIsComplete){
           // * Hide preivous
           hideConnectionStepImgs()
+
+          Scenes.realCurrentStep = 4
+          console.log(`RealCurrentStep: ${Scenes.realCurrentStep}`)
+
           // * calculation part
           partCalculation()
 
@@ -1782,7 +1806,203 @@ const Scenes = {
 
       return true
     }),
+
+    // !Experimental result section
+    //! R LOAD  Waveforms section
+    (step6 = function () {
+      setIsProcessRunning(true);
+      // to hide previous step
+      Dom.hideAll()
+      Scenes.items.btn_transparent.hide()
+      //! Required Items
+      Scenes.items.btn_next.show();
+      setCC("")
+
+      //r load click
+      let arrowIdx = 0;
+      let arrows = [
+        // () => {
+        //   Dom.setBlinkArrowRed(true, 669, 73, 30, null, 180).play();
+        //   arrowIdx++;
+        // },
+        () => {
+          Dom.setBlinkArrowRed(true, 518, 177, 30, null, 180).play();
+          arrowIdx++;
+        },
+        () => {
+          Dom.setBlinkArrowRed(true, 518, 177+85, 30, null, 180).play();
+          arrowIdx++;
+        },
+        () => {
+          Dom.setBlinkArrowRed(-1);
+        },
+      ];
+
+      arrows[arrowIdx]();
+      // setCC(
+      //   "To View the experimental waveforms select the parameters and proceed further."
+      // );
+      Scenes.items.menu_page.set(25, -10, 435);
+      // Scenes.items.circle.set(426, 362, 76).hide();
+
+      let btns = [
+        // Scenes.items.btn_input_voltage.set(719, 159 - 92, 47).zIndex(1),
+        Scenes.items.btn_1.set(558, 166, 52).zIndex(1),
+        Scenes.items.btn_2.set(558, 166+84, 60).zIndex(1),
+      ];
+
+      let vals = [
+        // Scenes.items.val_v
+        //   .set(719, 35 + 159 - 92, 47)
+        //   .zIndex(1)
+        //   .hide(),
+        Scenes.items.val_vin
+          .set(763, 169, 47)
+          .zIndex(1)
+          .hide(),
+        Scenes.items.val_vgs
+          .set(767, 255, 47)
+          .zIndex(1)
+          .hide(),
+      ];
+
+      let optionsClick = [0, 0];
+      let btn_see_waveforms = Scenes.items.btn_click
+        .set(442, 374, 51)
+        .zIndex(1);
+
+      btns.forEach((btn, idx) => {
+        btn.item.onclick = () => {
+          arrows[arrowIdx]();
+          vals[idx].show();
+          optionsClick[idx] = 1;
+          if (optionsClick.indexOf(0) == -1) {
+            Scenes.items.circle.set(426, 362, 76);
+            btn_see_waveforms.item.classList.add("btn-img");
+            let scaleBtn = anime({
+              targets: Scenes.items.circle.item,
+              scale: [1, 1.1],
+              duration: 1000,
+              easing: "linear",
+              loop: true,
+            });
+            btn_see_waveforms.item.onclick = () => {
+              scaleBtn.reset();
+              waveformShow();
+            };
+          }
+        };
+      });
+
+      let scenes = [
+        Scenes.items.frame_1.set(0, 9, 420).hide(),
+        Scenes.items.frame_2.set(0, 9, 420).hide(),
+        Scenes.items.frame_3.set(0, 9, 420).hide(),
+      ];
+
+      let waveformShow = () => {
+        vals.forEach((_, idx) => {
+          btns[idx].hide();
+          vals[idx].hide();
+        });
+        Scenes.items.circle.set(580, 346, 93).hide();
+        Scenes.items.btn_click.hide();
+        Scenes.items.menu_page.hide();
+
+        // Dom.setBlinkArrowRed(true, 555, 162, 30, null, 0).play();
+        Dom.setBlinkArrowRed(-1);
+
+        scenes[0].show();
+        setCC("The purple curves on the DSO screen are the output characteristics plots for different Gate-to-Source voltages.");
+        setCC(" Here, x-axis is Drain-to-Source voltage while y-axis is Drain current.")
+
+
+        setTimeout(() => {
+          // setCC("Click 'Next' to go to next step");
+          Dom.setBlinkArrow(true, 790, 415).play();
+          setIsProcessRunning(false);
+        }, 9000);
+      };
+
+      return true;
+    }),
+    //! R LOAD  CLICK 2
+    (step7 = function () {
+      setIsProcessRunning(true);
+
+      //! Required Items
+      Scenes.items.btn_next.show();
+      // to hide previous step
+      Scenes.items.frame_2.set(0, 9, 420);
+      Dom.setBlinkArrowRed(true, 532, 280, 30, null, 0).play();
+
+      setCC(
+        "Mosfet starts conducting at threshold Gate-to-Source voltage value of 3.5 V. Below this value, it is in cutoff region."
+      );
+
+      setTimeout(() => {
+        // setCC("Click 'Next' to go to next step");
+        Dom.setBlinkArrow(true, 790, 415).play();
+        setIsProcessRunning(false);
+      }, 7000);
+
+      //! Required Items
+
+      return true;
+    }),
+    //! R LOAD  CLICK 3
+    (step8 = function () {
+      setIsProcessRunning(true);
+
+      //! Required Items
+      Scenes.items.btn_next.show();
+      // Scenes.items.slider_box.hide();
+
+      // to hide previous step
+      Scenes.items.frame_3.set(0, 9, 420);
+      // Dom.setBlinkArrowRed(true, 555, 317, 30, null, 0).play();
+      // Dom.setBlinkArrowRed(-1)
+
+      setCC(
+        "There are three distinct regions: Cutoff, Linear and Saturation region."
+      );
+
+      setTimeout(() => {
+        // setCC("Click 'Next' to go to next step");
+        // Dom.setBlinkArrow(true, 790, 415).play();
+        setCC("MOSFET Done ✅");
+        setIsProcessRunning(false);
+        nextBtn.addEventListener("click", () => {
+          Scenes.mergeProcessHelper()
+        });
+      }, 6000);
+
+      //! Required Items
+
+      return true;
+    }),
+
   ],
+  // ! For adding realcurrentstep in every step
+  // ! For tracking the current step accuratly
+  realCurrentStep: null,
+  setRealCurrentStep(){
+    let count = 0
+    this.steps.forEach((step,idx) => {
+      const constCount = count
+      let newStep = () => {
+        this.realCurrentStep = constCount;
+        console.log(`RealCurrentStep: ${this.realCurrentStep}`)
+        return step();
+      };
+
+      count++;
+      let ignoreStepsForAdding = [4]
+      if(ignoreStepsForAdding.indexOf(idx) != -1) return
+
+      this.steps[idx] = newStep
+    });
+  },
   back() {
     //! animation isRunning
     // if (isRunning) {
@@ -1799,6 +2019,9 @@ const Scenes = {
     }
   },
   next() {
+    if(!this.realCurrentStep){
+      Scenes.setRealCurrentStep()
+    }
     //! animation isRunning
     if (isRunning) {
       return;

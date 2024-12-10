@@ -280,7 +280,7 @@ const sliders = {
       `${vgs_val} Ω`
     )
     this.slider_R_label.setContent(
-      `${this.getVal(this.slider_R)} A`
+      `${this.getVal(this.slider_R)} mA`
     )
   },
   labelAnime(target,value){

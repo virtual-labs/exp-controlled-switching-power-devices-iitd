@@ -255,15 +255,21 @@ function toggleNextBtn() {
   let nextBtn = document.querySelector(".btn-next");
   nextBtn.classList.toggle("btn-deactive");
 }
+const cancelSpeech = ()=>{
+  window.speechSynthesis.cancel()
+  ccQueue = []
+}
+
 const setIsProcessRunning = (value) => {
   // calling toggle the next
-  if (value != isRunning) {
-    toggleNextBtn();
+  if(value != isRunning){
+    toggleNextBtn()
   }
 
   isRunning = value;
-  if (value) {
-    Dom.hideAll();
+  if(value){
+    cancelSpeech()
+    Dom.hideAll()
   }
 };
 
@@ -305,13 +311,14 @@ let student_name = "";
 
 // ! text to audio
 
-const textToSpeach = (text) => {
-  // if(isMute){
-  //   return;
-  // }
+const textToSpeach = (text,speak=true) => {
   let utterance = new SpeechSynthesisUtterance();
   utterance.text = text;
   utterance.voice = window.speechSynthesis.getVoices()[0];
+  if(isMute || !speak){
+    utterance.volume = 0
+    utterance.rate = 10
+  }
   window.speechSynthesis.speak(utterance);
   return utterance;
 };
@@ -320,25 +327,25 @@ const textToSpeach = (text) => {
 let ccQueue = [];
 // for subtitile
 let ccObj = null;
-function setCC(text = null, speed = 25) {
+function setCC(text = null, speed = 25, speak = true) {
   if (ccObj != null) {
     ccObj.destroy();
   }
-
+  
   let ccDom = get(".steps-subtitle .subtitle");
   ccQueue.push(text);
   ccObj = new Typed(ccDom, {
     strings: ["", ...ccQueue],
     typeSpeed: speed,
-    onStringTyped() {
-      ccQueue.shift();
+    onStringTyped(){
+      ccQueue.shift()
       // if(ccQueue.length != 0){
-      //   setCC(ccQueue.shift())
+      //   setCC(ccQueue.shift())`
       // }
-    },
+    }
   });
-  if (!isMute) textToSpeach(text);
-  return ccDom;
+  let utterance = textToSpeach(text,speak)
+  return utterance
 }
 
 // ! class Dom{} is send to seperate file

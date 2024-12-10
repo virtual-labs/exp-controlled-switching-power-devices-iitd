@@ -255,15 +255,21 @@ function toggleNextBtn() {
   let nextBtn = document.querySelector(".btn-next");
   nextBtn.classList.toggle("btn-deactive");
 }
+const cancelSpeech = ()=>{
+  window.speechSynthesis.cancel()
+  ccQueue = []
+}
+
 const setIsProcessRunning = (value) => {
   // calling toggle the next
-  if (value != isRunning) {
-    toggleNextBtn();
+  if(value != isRunning){
+    toggleNextBtn()
   }
 
   isRunning = value;
-  if (value) {
-    Dom.hideAll();
+  if(value){
+    cancelSpeech()
+    Dom.hideAll()
   }
 };
 
@@ -305,13 +311,16 @@ let student_name = "";
 
 // ! text to audio
 
-const textToSpeach = (text) => {
-  // if(isMute){
-  //   return;
-  // }
+const textToSpeach = (text,speak=true) => {
+  // for filter <sub></sub>
+  text = text.replaceAll("<sub>"," ").replaceAll("</sub>"," ")
   let utterance = new SpeechSynthesisUtterance();
   utterance.text = text;
   utterance.voice = window.speechSynthesis.getVoices()[0];
+  if(isMute || !speak){
+    utterance.volume = 0
+    utterance.rate = 10
+  }
   window.speechSynthesis.speak(utterance);
   return utterance;
 };
@@ -320,28 +329,25 @@ const textToSpeach = (text) => {
 let ccQueue = [];
 // for subtitile
 let ccObj = null;
-function setCC(text = null, speed = 25,typeText = true) {
+function setCC(text = null, speed = 25, speak = true) {
   if (ccObj != null) {
     ccObj.destroy();
   }
-
-  let ccDom = get(".steps-subtitle .subtitle");
-  if(typeText){
-    ccQueue.push(text);
-    ccObj = new Typed(ccDom, {
-      strings: ["", ...ccQueue],
-      typeSpeed: speed,
-      onStringTyped() {
-        ccQueue.shift();
-        // if(ccQueue.length != 0){
-        //   setCC(ccQueue.shift())
-        // }
-      },
-    });
-  }
   
-  if (!isMute) textToSpeach(text);
-  return ccDom;
+  let ccDom = get(".steps-subtitle .subtitle");
+  ccQueue.push(text);
+  ccObj = new Typed(ccDom, {
+    strings: ["", ...ccQueue],
+    typeSpeed: speed,
+    onStringTyped(){
+      ccQueue.shift()
+      // if(ccQueue.length != 0){
+      //   setCC(ccQueue.shift())`
+      // }
+    }
+  });
+  let utterance = textToSpeach(text,speak)
+  return utterance
 }
 
 // ! class Dom{} is send to seperate file
@@ -645,7 +651,18 @@ const Scenes = {
         part_2_instruction_box : new Dom("part_2_instruction_box"),
         btn_procedure_calculations : new Dom("btn_procedure_calculations"),
     
+     //! Experimental section images added
 
+     btn_1: new Dom("btn_1"),
+     btn_2: new Dom("btn_2"),
+     btn_click: new Dom("btn_click"),
+     circle: new Dom("circle"),
+     frame_1: new Dom("frame_1"),
+     frame_2: new Dom("frame_2"),
+     frame_3: new Dom("frame_3"),
+     menu_page: new Dom("menu_page"),
+     val_vgs: new Dom("val_vgs"),
+     val_vin: new Dom("val_vin"),
 
     domQs1: new Dom("domQs1"),
     domQs2: new Dom("domQs2"),
@@ -899,29 +916,31 @@ const Scenes = {
 
     switch(step){
       case "1_1" : 
-        instructionImg = Scenes.items.part_1_1_instruction_box.set(0,0).zIndex(50).hide()
+        instructionImg = Scenes.items.part_1_1_instruction_box.set(-242,-329,800).zIndex(50).hide()
         procedureImg = Scenes.items.part_1_1_procedure_box.set(-150,-500).zIndex(50).hide()
         nomenclatureImg = Scenes.items.part_1_1_nomenclature_box.set(-374,null,800).zIndex(50).hide()
         conclusionImg = Scenes.items.part_1_1_conclusion_box.set(null,-140,600).zIndex(50).hide()
         speakConclusion = ()=>{
-          setCC("From these experiments and the plots it is clear that, Since IGBT is a voltage controlled device, by changing the gate-to-emitter voltage, the output characteristics were generated. These characteristics clearly display three operating regions of IGBT which are cutoff, linear and saturation.",25,false)
+          setCC("From these experiments and the plots it is clear that, Since IGBT is a voltage controlled device, by changing the gate-to-emitter voltage,", 25)
+          setCC(" the output characteristics were generated. These characteristics clearly display three operating regions of IGBT which are cutoff, linear and saturation.",25)
         }
         calledFor = 0
         break;
 
       case "1_2" :  
-        instructionImg = Scenes.items.part_1_2_instruction_box.set(-100,80,500).hide().zIndex(50)
+        instructionImg = Scenes.items.part_1_2_instruction_box.set(-135,-46,500).hide().zIndex(50)
         procedureImg = Scenes.items.part_1_2_procedure_box.set(-100,80,500).hide().zIndex(50)
         nomenclatureImg = Scenes.items.part_1_2_nomenclature_box.set(-100,0,400).hide().zIndex(50)
         conclusionImg = Scenes.items.part_1_1_conclusion_box.set(10,5,700).hide().zIndex(50)
         speakConclusion = ()=>{
-          setCC("From these experiments and the plots it is clear that, Since IGBT is a voltage controlled device, by changing the gate-to-emitter voltage, the output characteristics were generated. These characteristics clearly display three operating regions of IGBT which are cutoff, linear and saturation.",25,false)
+          setCC("From these experiments and the plots it is clear that, Since IGBT is a voltage controlled device, by changing the gate-to-emitter voltage,", 25)
+          setCC("the output characteristics were generated. These characteristics clearly display three operating regions of IGBT which are cutoff, linear and saturation.",25)
         }
         calledFor = 1
         break;
 
       case "2" :  
-        instructionImg = Scenes.items.part_2_instruction_box.set(-100,80,500).hide().zIndex(50)
+        instructionImg = Scenes.items.part_2_instruction_box.set(-135,-46,500).hide().zIndex(50)
         procedureImg = Scenes.items.part_2_procedure_box.set(-80,-100,500).hide().zIndex(50)
         nomenclatureImg = Scenes.items.part_2_nomenclature_box.set(-100,0,500).hide().zIndex(50)
         conclusionImg = Scenes.items.part_1_1_conclusion_box.set(10,-10,700).hide().zIndex(50)
@@ -946,14 +965,15 @@ const Scenes = {
       nomenclatureImg.show().zIndex(40)
     }
     let showConclusionImg = function(){
-      Dom.setBlinkArrowRed(-1)
+      // Dom.setBlinkArrowRed(-1)
       conclusionImg.show().zIndex(40)
       if(!Scenes.popupImgHoverdConclusion[calledFor]){
         speakConclusion()
         Scenes.popupImgHoverdConclusion[calledFor] = true
         setTimeout(()=>{
           Dom.setBlinkArrow(true, 790, 544).play();
-          setCC("Click 'Next' to go to next step");
+          Dom.setBlinkArrowRed(-1)
+          // setCC("Click 'Next' to go to next step");
           setIsProcessRunning(false);
         },25000)
       }
@@ -988,7 +1008,7 @@ const Scenes = {
     
     btn[3].item.onmouseover = showConclusionImg
     btn[3].item.onmouseout = hideConclusionImg
-  },
+  }, 
   // for typing hello text
   intru: null,
   intruVoice: null,
@@ -1541,7 +1561,7 @@ const Scenes = {
       let images = [
         Scenes.items.part_1_2_components.set(-0,-70,480,983).zIndex(1),
         Scenes.items.part_2_conncection_supply_1_red_button.set(145, 68, 29, 27).zIndex(20),
-        Scenes.items.part_2_conncection_supply_2_red_button.set(148, 321, 27, 23).zIndex(20),
+        Scenes.items.part_2_conncection_supply_2_red_button.set(149, 320, 27, 23).zIndex(20),
         Scenes.items.part_1_2_connections_box,
       ]
 
@@ -1819,6 +1839,10 @@ const Scenes = {
         if(partConnectionsIsComplete){
           // * Hide preivous
           hideConnectionStepImgs()
+
+          Scenes.realCurrentStep = 4
+          console.log(`RealCurrentStep: ${Scenes.realCurrentStep}`)
+
           // * calculation part
           partCalculation()
 
@@ -1829,8 +1853,199 @@ const Scenes = {
 
       return true
     }),
+
+    // !Experimental result section
+    //! R LOAD  Waveforms section
+    (step6 = function () {
+      setIsProcessRunning(true);
+      // to hide previous step
+      Scenes.items.btn_transparent.hide()
+      //! Required Items
+      Scenes.items.btn_next.show();
+      setCC("")
+
+      //r load click
+      let arrowIdx = 0;
+      let arrows = [
+        // () => {
+        //   Dom.setBlinkArrowRed(true, 669, 73, 30, null, 180).play();
+        //   arrowIdx++;
+        // },
+        () => {
+          Dom.setBlinkArrowRed(true, 518, 177, 30, null, 180).play();
+          arrowIdx++;
+        },
+        () => {
+          Dom.setBlinkArrowRed(true, 518, 177 + 85, 30, null, 180).play();
+          arrowIdx++;
+        },
+        () => {
+          Dom.setBlinkArrowRed(-1);
+        },
+      ];
+
+      arrows[arrowIdx]();
+      // setCC(
+      //   "To View the experimental waveforms select the parameters and proceed further."
+      // );
+      Scenes.items.menu_page.set(30, -11, 435);
+      // Scenes.items.circle.set(426, 362, 76).hide();
+
+      let btns = [
+        // Scenes.items.btn_input_voltage.set(719, 159 - 92, 47).zIndex(1),
+        Scenes.items.btn_1.set(558, 166, 52).zIndex(1),
+        Scenes.items.btn_2.set(558, 166 + 84, 60).zIndex(1),
+      ];
+
+      let vals = [
+        // Scenes.items.val_v
+        //   .set(719, 35 + 159 - 92, 47)
+        //   .zIndex(1)
+        //   .hide(),
+        Scenes.items.val_vin.set(763, 169, 47).zIndex(1).hide(),
+        Scenes.items.val_vgs.set(767, 255, 47).zIndex(1).hide(),
+      ];
+
+      let optionsClick = [0, 0];
+      let btn_see_waveforms = Scenes.items.btn_click
+        .set(442, 374, 51)
+        .zIndex(1);
+
+      btns.forEach((btn, idx) => {
+        btn.item.onclick = () => {
+          arrows[arrowIdx]();
+          vals[idx].show();
+          optionsClick[idx] = 1;
+          if (optionsClick.indexOf(0) == -1) {
+            Scenes.items.circle.set(426, 362, 76);
+            btn_see_waveforms.item.classList.add("btn-img");
+            let scaleBtn = anime({
+              targets: Scenes.items.circle.item,
+              scale: [1, 1.1],
+              duration: 1000,
+              easing: "linear",
+              loop: true,
+            });
+            btn_see_waveforms.item.onclick = () => {
+              scaleBtn.reset();
+              waveformShow();
+            };
+          }
+        };
+      });
+
+      let scenes = [
+        Scenes.items.frame_1.set(0, 9, 420).hide(),
+        Scenes.items.frame_2.set(0, 9, 420).hide(),
+        Scenes.items.frame_3.set(0, 9, 420).hide(),
+      ];
+
+      let waveformShow = () => {
+        vals.forEach((_, idx) => {
+          btns[idx].hide();
+          vals[idx].hide();
+        });
+        Scenes.items.circle.set(580, 346, 93).hide();
+        Scenes.items.btn_click.hide();
+        Scenes.items.menu_page.hide();
+
+        // Dom.setBlinkArrowRed(true, 555, 162, 30, null, 0).play();
+        Dom.setBlinkArrowRed(-1);
+
+        scenes[0].show();
+        setCC(
+          "The purple curves are the output characteristics plots for different Gate-to-Emitter voltages."
+        );
+        setCC(
+          "The x-axis is Collector-to-Emitter voltage while the y-axis is the collector current."
+        );
+
+        setTimeout(() => {
+          // setCC("Click 'Next' to go to next step");
+          Dom.setBlinkArrow(true, 790, 415).play();
+          setIsProcessRunning(false);
+        }, 9000);
+      };
+
+      return true;
+    }),
+    //! R LOAD  CLICK 2
+    (step7 = function () {
+      setIsProcessRunning(true);
+
+      //! Required Items
+      Scenes.items.btn_next.show();
+      // to hide previous step
+      Scenes.items.frame_2.set(0, 9, 420);
+      Dom.setBlinkArrowRed(true, 532, 280, 30, null, 0).play();
+
+      setCC(
+        "IGBT starts conducting at threshold Gate-to-Emitter voltage value of 5 V. Below this value, IGBT is in cutoff region."
+      );
+
+      setTimeout(() => {
+        // setCC("Click 'Next' to go to next step");
+        Dom.setBlinkArrow(true, 790, 415).play();
+        setIsProcessRunning(false);
+      }, 7000);
+
+      //! Required Items
+
+      return true;
+    }),
+    //! R LOAD  CLICK 3
+    (step8 = function () {
+      setIsProcessRunning(true);
+
+      //! Required Items
+      Scenes.items.btn_next.show();
+      // Scenes.items.slider_box.hide();
+
+      // to hide previous step
+      Scenes.items.frame_3.set(0, 9, 420);
+      // Dom.setBlinkArrowRed(true, 555, 317, 30, null, 0).play();
+      // Dom.setBlinkArrowRed(-1)
+
+      setCC(
+        "These characteristics clearly indicate three distinct regions: Cutoff, Linear and Active region."
+      );
+
+      setTimeout(() => {
+        setCC("IGBT Done ✅");
+        // ! Merge Helper
+        nextBtn.addEventListener("click", () => {
+          Scenes.mergeProcessHelper()
+        });
+        setIsProcessRunning(false);
+        // setCC("Click 'Next' to go to next step");
+        // Dom.setBlinkArrow(true, 790, 415).play();
+      }, 3000);
+
+      //! Required Items
+
+      return true;
+    }),
     
   ],
+  // ! For adding realcurrentstep in every step
+  // ! For tracking the current step accuratly
+  realCurrentStep: null,
+  setRealCurrentStep(){
+    let count = 0
+    this.steps.forEach((step,idx) => {
+      const constCount = count
+      let newStep = () => {
+        this.realCurrentStep = constCount;
+        console.log(`RealCurrentStep: ${this.realCurrentStep}`)
+        return step();
+      };
+
+      count++;
+      let ignoreStepsForAdding = [4]
+      if(ignoreStepsForAdding.indexOf(idx) != -1) return
+      this.steps[idx] = newStep
+    });
+  },
   back() {
     //! animation isRunning
     // if (isRunning) {
@@ -1847,6 +2062,9 @@ const Scenes = {
     }
   },
   next() {
+    if(!this.realCurrentStep){
+      Scenes.setRealCurrentStep()
+    }
     //! animation isRunning
     if (isRunning) {
       return;

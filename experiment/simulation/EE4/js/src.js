@@ -147,7 +147,20 @@ const src = {
       part_2_procedure:this.allImgsDom[index++],
       part_3_nomenclature:this.allImgsDom[index++],
       part_3_procedure:this.allImgsDom[index++],
+      compo_left:this.allImgsDom[index++],
 
+       // Experimental section images added here
+
+       btn_1: this.allImgsDom[index++],
+       btn_2: this.allImgsDom[index++],
+       btn_click: this.allImgsDom[index++],
+       circle: this.allImgsDom[index++],
+       frame_1: this.allImgsDom[index++],
+       frame_2: this.allImgsDom[index++],
+       frame_3: this.allImgsDom[index++],
+       menu_page: this.allImgsDom[index++],
+       val_vgs: this.allImgsDom[index++],
+       val_vin: this.allImgsDom[index++],
 
       // * Question Mark
       domQs1: this.allQsDom[0],

@@ -230,17 +230,18 @@ const sliders = {
                 setCC("Goto 'Conclusion'")
                 setTimeout(()=>{
                   // Dom.setBlinkArrowRed(true, 790, 444).play();
-                  setCC("IGBT Done ✅");
+                  // setCC("IGBT Done ✅");
                   setIsProcessRunning(false);
+                  setCC("Click 'Next' to go to next step");
                   
                   // ! Merge Helper
-                  nextBtn.addEventListener("click", () => {
-                    Scenes.mergeProcessHelper()
-                  });
+                  // nextBtn.addEventListener("click", () => {
+                  //   Scenes.mergeProcessHelper()
+                  // });
 
                 },25000)
                 // for going to the second step
-                Scenes.currentStep = 2
+                // Scenes.currentStep = 2
               }
             }
           },0)

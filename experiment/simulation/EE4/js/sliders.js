@@ -229,15 +229,18 @@ const sliders = {
                 currentDifferenceIndex_vGs++
                 Dom.setBlinkArrowRed(-1)
                 
-                setCC("MOSFET Done ✅");
+                // setCC("MOSFET Done ✅");
+                // setIsProcessRunning(false);
+
+                setCC("Click 'Next' to go to next step");
                 setIsProcessRunning(false);
                 
                 // ! Merge Helper
-                nextBtn.addEventListener("click", () => {
-                  Scenes.mergeProcessHelper()
-                });
-                // for going to the second step
-                Scenes.currentStep = 2
+                // nextBtn.addEventListener("click", () => {
+                //   Scenes.mergeProcessHelper()
+                // });
+                // // for going to the second step
+                // Scenes.currentStep = 2
               }
             }
           },0)

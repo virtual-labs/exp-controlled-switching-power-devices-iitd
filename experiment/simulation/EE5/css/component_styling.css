@@ -618,3 +618,20 @@
     position: absolute;
     display: none;
 } 
+
+.btn-disabled{
+    color: gray;
+    box-shadow: none;
+    background-color: #f1f2f4;
+    user-select: none;
+    cursor: not-allowed;
+    /* pointer-events: none; */
+  }
+  .btn-disabled:active{
+    opacity: none!important;
+    transform: none!important;
+  }
+  .btn-disabled:hover{
+    border: none;
+    box-shadow: none;
+  }
