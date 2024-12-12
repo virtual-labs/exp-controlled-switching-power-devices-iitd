@@ -1,0 +1,15 @@
+Static Data is not available for:
+    • PreTest and PostTest not given:
+        1. Foundation formwork (PERI)
+        2. Formwork for foundation
+        3. Formwork for wall- simple and climbing formwork
+        4. Formwork for column
+        5. Formwork for beam and slab using HD Towers
+        6. Beam forming formwork.
+        7. Beam and slab using Flex System
+        8. Column (PERI)
+        9. Wall (PERI)
+        10. Monolithic
+
+    • Aim, theory, procedure and reference are not given:
+        1. Monolithic
