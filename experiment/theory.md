@@ -607,5 +607,9 @@ Fig. 15. Output characteristics of MOSFET.
 <br>
 </center>
 <br> 
-
+<div style="float: left; width:100%;">
+  
 MOSFET has three operating regions: Cutoff region, Linear region and Saturation region as shown in Fig. 15.
+
+#### ("For more Information on mathematical analysis, see references")
+<br></div>
