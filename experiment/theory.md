@@ -463,7 +463,7 @@ Fig. 8. Internal structure of IGBT.
 1.  Insulated-Gate Bipolar Transistor (IGBT) is a semiconductor power device. It combines the advantages of a BJT and a MOSFET. It has high input impedance, like MOSFET, and low on-state conduction losses, like BJT. However, it shows higher switching time especially during the turn-off transition.<br>
 
 2.  It has a four PNPN layer structure: a) Two P-type doped (p) layers. b) Two N-type doped layers- one is heavy doped (n+) and the other is lightly doped (n-). It has three junctions: n+-p (J<sub>1</sub>), p-n- (J<sub>2</sub>) and n--p (J<sub>3</sub>).<br>
-3.  The  SCR has three external terminals namely: Anode (A), Cathode (K) and Gate (G).<br><br>
+3.  The IGBT has three external terminals namely: Gate (G), Collector (C) and Emitter (E).<br><br>
 
 
 **Operating modes of IGBT:**
@@ -474,15 +474,11 @@ Fig. 8. Internal structure of IGBT.
 2.  Forward Conducting State: When the Gate voltage is made more positive than the Emitter voltage, n carriers are drawn into the p-channel near the gate region; this results in a forward bias of the n-p and p-n junctions. Current freely flows from collector to emitter.<br>
 During forward conduction, the IGBT will operate in any one of the following states, depending on the values of Collector-to-Emitter voltage (VCE) and the Gate voltage (VGE) values: Cut-off region, Active region or Saturation region.
   
-3.  Once the SCR starts conducting, gate loses control over the device. It continues conducting even after gate signal is removed. However, if the forward anode current (I<sub>A</sub>) is reduced below a level known as the ‘holding current’ (I<sub>H</sub>), the SCR goes to blocking state. The holding current is less than the latching current.
-
-4.  Reverse Blocking State:  When the Emitter voltage is higher with respect to the Collector voltage, no current can flow through the device even with gate current applied.<br><br>
+3.  Reverse Blocking State:  When the Emitter voltage is higher with respect to the Collector voltage, no current can flow through the device even with gate current applied.<br><br>
 
 
 
 **Characteristics of the IGBT:**
-
-There are two important characteristics defined for an IGBT:
 
 1.  Output Characteristics: It is the plot between the Collector-to-Emitter voltage (VCE) and the Collector current (IC) for a fixed Gate-to-Emitter voltage (VGE). The circuit diagram to plot the characteristics is given in Fig. 9. Voltage ‘VCE’ is measured by the voltmeter while the ammeter measures the current ‘IC’.<br><br>
 
@@ -589,8 +585,6 @@ During forward conduction, the MOSFET will operate in any one of the following s
 3.  Reverse Blocking State (v<sub>DS</sub> < 0):  When the drain-to-source voltage (V<sub>DS</sub>) is negative the junctions become reverse biased and MOSFET stops conducting.<br><br>
 
 **Characteristics of the MOSFET:**
-
-There are two important characteristics defined for an MOSFET:
 
 Output Characteristics: It is the plot between the Drain-to-Source voltage (V<sub>DS</sub>) and the Drain current (I<sub>D</sub>) for a fixed Gate-to-Source voltage (V<sub>GS</sub>). The circuit diagram to plot these characteristics is given in Fig. 14. Voltage ‘V<sub>DS</sub>’ is measured by the voltmeter while the ammeter measures the current ‘I<sub>D</sub>’.<br><br>
 
