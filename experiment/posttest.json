@@ -2,38 +2,227 @@
   "version": 2.0,
   "questions": [
     {
-      "question": "This is a Sample Question 1?",
-      "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+      "question": "1. In SCR, the magnitude of latching current (I<sub>L</sub>) compared to holding current (I<sub>H</sub>) is:",
+      "answers": {  
+        "a": "Higher",
+        "b": "Lower",
+        "c": "Equal",
+        "d": "Negligible"
       },
       "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
+        "a": "Explanation 1: The latching current is always higher than the holding current.",
         "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+        "c": "Explanation 3",
+        "d": "Explanation 4"
       },
       "correctAnswer": "a",
       "difficulty": "beginner"
     },
+      
     {
-      "question": "This is a Sample Question 2?",
+      "question": "2. The v-i characteristics of SCR is a plot between:",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+        "a": "Gate voltage (v<sub>g</sub>)-vs-Anode Current (i<sub>A</sub>)",
+        "b": "Anode-to-Cathode voltage (v<sub>AK</sub>)-vs-Anode Current (i<sub>A</sub>)",
+        "c": "Anode-to-Cathode voltage (v<sub>AK</sub>)-vs-Gate Current (I<sub>g</sub>)",
+        "d": "Gate voltage (v<sub>g</sub>)-vs-Gate Current (I<sub>g</sub>)"
       },
       "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
+        "a": "Explanation 1",
+        "b": "Explanation 2: v-i characteristics shows the relation between the voltage across anode-to-cathode and the anode current.",
+        "c": "Explanation 3",
+        "d": "Explanation 4"
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    
+    {
+      
+      "question": "3. The minimum value of anode current (i<sub>A</sub>) below which the SCR turns-OFF is called the",
+      "answers": {
+        "a": "Peak anode current",
+        "b": "Latching current",
+        "c": "Holding current",
+        "d": "Forward breakover current"
+      },
+      "explanations": {
+        "a": "Explanation 1",
         "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+        "c": "Explanation 3: Holding current is the minimum current required to keep SCR in conduction mode.",
+        "d": "Explanation 4"
+      },
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+        
+    {
+
+      "question": "4. Under forward blocking state, the three junctions of the SCR (J<sub>1</sub>, J<sub>2</sub> and J<sub>3</sub>) are in which states?<br><center><img src='images/pos2.png' height='300px'></center><br>",
+      "answers": {
+        "a": "All are forward biased",
+        "b": "All are reverse biased",
+        "c": "'J<sub>1</sub>, J<sub>3</sub>' are forward biased while 'J<sub>2</sub>' is reverse biased",
+        "d": "'J<sub>1</sub>, J<sub>2</sub>' are forward biased while 'J<sub>3</sub>' is reverse biased"
+      },
+      "explanations": {
+        "a": "Explanation 1",
+        "b": "Explanation 2",
+        "c": "Explanation 3: During forward blocking J<sub>1</sub> and J<sub>2</sub> are forward biased because a positive Anode-to-Cathode voltage is applied. Whereas J<sub>2</sub>  is reverse biased due to the absence of gate current.",
+        "d": "Explanation 4"
+      },
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+
+      {
+      "question": "5. A SCR is triggered using a gate current. After sometime the gate signal is stopped. What is the status of SCR?",
+      "answers": {
+        "a": "SCR stops conducting.",
+        "b": "SCR goes into reverse breakdown.",
+        "c": "SCR continues to conduct if anode current is maintained above latching current.",
+        "d": "SCR continues to conduct if anode current is maintained above holding current."
+      },
+      "explanations": {
+        "a": "Explanation 1",
+        "b": "Explanation 2",
+        "c": "Explanation 3",
+        "d": "Explanation 4: SCR is a semi-controlled device i.e. once turned- ON (by gate current), it continues conducting even when gate pulse is removed (provided anode current is greater than the holding current)."
+      },
+      "correctAnswer": "d",
+      "difficulty": "beginner"
+    },
+
+    { 
+
+      "question": "6. A forward biased MOSFET comes into ON-state by?",
+      "answers": {
+        "a": "Allowing Drain current (I<sub>D</sub>)",
+        "b": "Applying Drain-to-Source voltage (V<sub>DS</sub>)",
+        "c": "Applying Gate-to-Source voltage (V<sub>GS</sub>)",
+        "d": "Allowing Gate current (I<sub>G</sub>)"
+      },
+      "explanations": {
+        "a": "Explanation 1",
+        "b": "Explanation 2",
+        "c": "Explanation 3: MOSFET is a voltage controlled device. Applying a positive Gate-to-Source voltage turns- ON the MOSFET.",
+        "d": "Explanation 4"
+      },
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+
+      {
+
+      "question": "7. In comparison to IGBT the losses in MOSFET are?",
+      "answers": {
+        "a": "Lower",
+        "b": "Higher",
+        "c": "Almost equal",
+        "d": "Double"
+      },
+      "explanations": {
+        "a": "Explanation 1",
+        "b": "Explanation 2: IGBT has lower conduction losses compared to MOSFET.",
+        "c": "Explanation 3",
+        "d": "Explanation 4"
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+
+      {    
+      "question": "8. Reliable method for firing an SCR is?",
+      "answers": {
+        "a": "High dv/dt",
+        "b": "Continuous gate signal",
+        "c": "Firing pulses",
+        "d": "High di/dt"
+      },
+      "explanations": {
+        "a": "Explanation 1",
+        "b": "Explanation 2",
+        "c": "Explanation 3: SCR is a unidirectional device and allows current to flow only from Anode to Cathode when sufficient Gate current or firing pulses is applied.",
+        "d": "Explanation 4"
+      },
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+
+      {
+      "question": "9. In practice, the correct method of turning-ON a SCR is?",
+      "answers": {
+        "a": "Increasing the anode-to-cathode voltage (v<sub>AK</sub>) till it reaches a value equal to or above forward breakover voltage (v<sub>BO</sub>).",
+        "b": "The anode-to-cathode voltage (v<sub>AK</sub>) is maintained below the breakover voltage (v<sub>BO</sub>) and a positive voltage between the gate and cathode (V<sub>g</sub>) is applied across SCR.",
+        "c": "Increasing the anode-to-cathode voltage (v<sub>AK</sub>) till the anode current (i<sub>A</sub>) reaches above holding current (I<sub>H</sub>).",
+        "d": "Positive anode-to-cathode voltage (v<sub>AK</sub>) automatically turns- ON the SCR."
+      },
+      "explanations": {
+        "a": "Explanation 1",
+        "b": "Explanation 2: SCR is turned- ON by forward biasing it and giving it sufficient gate current.",
+        "c": "Explanation 3",
+        "d": "Explanation 4"
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+
+      {
+      "question": "10. How can a conducting SCR be turned-OFF?",
+      "answers": {
+        "a": "By application of negative anode current (i<sub>A</sub>) or negative anode-to-cathode voltage (v<sub>AK</sub>).",
+        "b": "By application of negative gate current (I<sub>g</sub>).",
+        "c": "By reducing the gate current (I<sub>g</sub>) to zero.",
+        "d": "All of the above methods are correct."
+      },
+      "explanations": {
+        "a": "Explanation 1: Applying negative anode current or negative anode-to-cathode voltage reverse biases the SCR, turning it OFF.",
+        "b": "Explanation 2",
+        "c": "Explanation 3",
+        "d": "Explanation 4"
+      },
+      "correctAnswer": "a",
+      "difficulty": "beginner"
+    },
+
+
+    {
+      
+      "question": "11. An IGBT is in ON- state. It is observed that with increasing collector-to-emitter voltage (V<sub>CE</sub>) the collector current (I<sub>C</sub>) is almost constant. Which region is the IGBT operating in?",
+      "answers": {
+        "a": "Cutoff",
+        "b": "Linear",
+        "c": "Saturation",
+        "d": "Reverse blocking"
+      },
+      "explanations": {
+        "a": "Explanation 1",
+        "b": "Explanation 2",
+        "c": "Explanation 3: In saturation mode, the IGBT current remains constant even when Collector-to-emitter voltage is increased.",
+        "d": "Explanation 4"
+      },
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+        
+    {
+
+      "question": "12. When compared to MOSFET  the time required to turn- OFF an IGBT is?",
+      "answers": {
+        "a": "Almost equal",
+        "b": "Lower",
+        "c": "Higher",
+        "d": "Half"
+      },
+      "explanations": {
+        "a": "Explanation 1",
+        "b": "Explanation 2",
+        "c": "Explanation 3: Switching time of IGBT is greater than MOSFET due to the presence of tail current.",
+        "d": "Explanation 4"
       },
       "correctAnswer": "c",
       "difficulty": "beginner"
     }
+
   ]
 }

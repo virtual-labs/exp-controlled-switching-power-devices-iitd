@@ -1,1 +1,1 @@
-## Experiment name
+## Characteristics of controlled switching power devices
