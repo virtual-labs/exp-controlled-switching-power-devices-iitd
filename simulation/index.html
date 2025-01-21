@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        iframe{
+            width: 100%;
+            margin: 0;
+            height: 650px;
+        }
+        body{
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <iframe id="iframe" src frameborder="0"></iframe>
+    <script src="./EE4/js/typed.js"></script>
+    <script>
+        let iframe = document.querySelector("#iframe")
+        let paths = {
+            SCR : "./EE5/index.html",
+            IGBT : "./EE6/index.html",
+            MOSFET : "./EE4/index.html",
+        }
+        let StepDone = {
+            "SCR":false,
+            "IGBT":false,
+            "MOSFET":false,
+            goto: "",
+        }
+
+        let btn = document.querySelector("button")
+        let idx = 0
+        // btn.onclick = ()=>{
+        //     iframe.attributes['src'].value = paths[idx++]
+        // }
+        // btn.click()
+
+        function setIframeSrc(path){
+            StepDone.goto = ""
+            localStorage.setItem("StepDone",JSON.stringify(StepDone))
+            iframe.attributes['src'].value = paths[path]
+        }
+
+        function detectMove(){
+            StepDone = JSON.parse(localStorage.getItem("StepDone"))
+            let menu = "menu",
+            IGBT = "IGBT",
+            MOSFET = "MOSFET",
+            scr = "SCR"
+            switch(StepDone.goto){
+                case menu:
+                    setIframeSrc("SCR")
+                    break
+                case IGBT:
+                    setIframeSrc(IGBT)
+                    break
+                case MOSFET:
+                    setIframeSrc(MOSFET)
+                    break
+            }   
+            console.log(StepDone.goto)
+        }
+
+        localStorage.setItem("StepDone",JSON.stringify(StepDone))
+        setIframeSrc("SCR")
+        setInterval(detectMove, 1000)
+        let pdx = 0
+        console.log("index:",pdx++,StepDone)
+        // iframe.attributes['src'].value = paths.MOSFET
+
+    </script>    
+<script src="../assets/js/iframeResize.js"></script>
+          
+          </body>
+</html>
